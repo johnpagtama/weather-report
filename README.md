@@ -1,2 +1,2 @@
 # weather-report
-Displays current weather data
+Displays 5 day forecast based on geographic coordinates
