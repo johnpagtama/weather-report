@@ -7,8 +7,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ForecastDataService {
-  fUrl: string = 'https://api.openweathermap.org/data/2.5/forecast?q=';
-  fKey: string = '&units=imperial&APPID=947a2cdc5ec42c0021585c5219f59a90';
+  fUrl: string = ``;
+  fKey: string = ``;
 
   fData: any = {};
 
