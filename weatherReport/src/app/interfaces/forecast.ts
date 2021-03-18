@@ -3,4 +3,5 @@ export interface Forecast {
   day: string;
   desc: string;
   icon: string;
+  temp: number;
 }

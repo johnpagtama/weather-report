@@ -2,14 +2,15 @@ export interface Weather {
   city: string;
   country: string;
   desc: string;
-  humidity: string;
+  humidity: number;
   icon: string;
-  pressure: string;
+  pressure: number;
   sunrise: string;
   sunset: string;
-  temp: string;
-  temp_max: string;
-  temp_min: string;
-  visibility: string;
-  wind: string;
+  temp: number;
+  temp_max: number;
+  temp_min: number;
+  visibility: number;
+  wind_direction: string;
+  wind_speed: number;
 }
