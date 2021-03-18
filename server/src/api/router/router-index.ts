@@ -1,13 +1,10 @@
 import express from 'express';
-import { getLocation } from './location/location-service';
-import { getWeather } from './weather/weather-service';
-import { getForecast } from './forecast/forecast-service';
+import { requestCurrentLocation } from './router-controller';
+import { requestWeather } from './router-controller';
 
 export const router = express.Router();
 
-// Uncomment later
-// router.get('/location', getLocation);
-// Uncomment later
-router.get('/weather', getWeather);
-// Uncomment later
-// router.get('/forecast', getForecast);
+// Returns current location data on startup
+router.get('/weather', requestCurrentLocation);
+// Returns weather data when a search query is sent
+router.get('/weather/:loc', requestWeather);

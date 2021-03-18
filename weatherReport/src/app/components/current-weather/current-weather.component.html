@@ -1,1 +1,8 @@
 <p>current-weather works!</p>
+<input #query type="text" placeholder="City,Country ex: Lodi,US" (keydown.enter)="getWeather(query.value)"> <button
+    type="button" (click)="getWeather(query.value)">Search</button>
+<div class="queryList" *ngFor="let q of queryList">
+    <ul>
+        <li>{{q}}</li>
+    </ul>
+</div>
