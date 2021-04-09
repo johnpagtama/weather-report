@@ -1,0 +1,9 @@
+@mixin invalidTouched($properties: ()) {
+    @at-root #{'.ng-invalid.ng-touched:not(form)'} {
+        @each $property-name, $property-value in $properties {
+            #{$property-name}: $property-value;
+        }
+        
+        @content;
+    }
+}

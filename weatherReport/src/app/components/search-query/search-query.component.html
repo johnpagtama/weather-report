@@ -1,1 +1,22 @@
-<p>search-query works!</p>
+<form class="search-layout" [formGroup]="searchForm" (ngSubmit)="onSubmit()" (ngEnter)="onSubmit()">
+    <mat-form-field>
+        <mat-label>Location</mat-label>
+        <input matInput formControlName="query" class="search-layout__query" type="text" [errorStateMatcher]="matcher"
+        placeholder="City,Country ex: Lodi,US">
+        
+        <mat-error *ngIf="this.searchForm.controls.query.hasError('pattern')">
+            Location can only contain <strong>letters, digits, commas, spaces, and periods</strong> <br>
+            Cannot exceed <strong>1 comma</strong> <br>
+            Country code cannot exceed <strong>2 letters</strong>
+        </mat-error>
+        
+        <mat-error *ngIf="this.searchForm.controls.query.hasError('minlength')">
+            Location must contain at least <strong>5 characters Ex. Bo,SL</strong>
+        </mat-error>
+
+        <mat-error *ngIf="this.searchForm.controls.query.hasError('required')">
+        Location is <strong>required</strong>
+        </mat-error>
+    </mat-form-field>
+    <button mat-flat-button color="primary" [disabled]="!searchForm.valid" class="search-layout__btn" type="submit">Search</button>
+</form>

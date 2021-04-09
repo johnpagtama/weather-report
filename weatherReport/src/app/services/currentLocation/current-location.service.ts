@@ -9,10 +9,7 @@ import { Observable } from 'rxjs';
 export class CurrentLocationService {
   private ipUrl: string = 'http://localhost:4000/api/router/weather/';
   
-  public ipData: Observable<CurrentLocation>;
-  
   constructor(private http: HttpClient) {}
-  
   // Returns current location
-  getCurrentLocation = (): Observable<CurrentLocation> => this.ipData = this.http.get<CurrentLocation>(this.ipUrl);
+  getCurrentLocation = (): Observable<CurrentLocation> => this.http.get<CurrentLocation>(this.ipUrl);
 }

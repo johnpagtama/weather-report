@@ -1,0 +1,15 @@
+@import '../../partials/class-templates/class-templates';
+
+@include block(layout,  (display: grid,
+                        height: 100vh,
+                        margin: 0 auto,
+                        grid-template-rows: 3fr 1fr 1fr 2fr,
+                        grid-template-areas:    "layout__current-weather"
+                                                "layout__forecast"
+                                                "layout__search-query"
+                                                "layout__city-list")) {
+    @include element(current-weather, (grid-area: layout__current-weather));
+    @include element(forecast, (grid-area: layout__forecast));
+    @include element(search-query, (grid-area: layout__search-query));
+    @include element(city-list, (grid-area: layout__city-list));
+}

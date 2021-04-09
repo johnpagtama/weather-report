@@ -1,0 +1,51 @@
+@mixin placeholder($properties: ()) {
+    @at-root #{&}#{'::'}#{'-webkit-input-placeholder'} {
+        @each $property-name, $property-value in $properties {
+            #{$property-name}: $property-value;
+        }
+    }
+    
+    @at-root #{&}#{':'}#{'-moz-placeholder'} {
+        @each $property-name, $property-value in $properties {
+            #{$property-name}: $property-value;
+        }
+    }
+    
+    @at-root #{&}#{'::'}#{'-moz-placeholder'} {
+        @each $property-name, $property-value in $properties {
+            #{$property-name}: $property-value;
+        }
+    }
+    
+    @at-root #{&}#{':'}#{'ms-input-placeholder'} {
+        @each $property-name, $property-value in $properties {
+            #{$property-name}: $property-value;
+        }
+    }
+}
+
+@mixin placeholderFocus($properties: ()) {
+    @at-root #{&}#{':focus'}#{'::'}#{'-webkit-input-placeholder'} {
+        @each $property-name, $property-value in $properties {
+            #{$property-name}: $property-value;
+        }
+    }
+    
+    @at-root #{&}#{':focus'}#{':'}#{'-moz-placeholder'} {
+        @each $property-name, $property-value in $properties {
+            #{$property-name}: $property-value;
+        }
+    }
+    
+    @at-root #{&}#{':focus'}#{'::'}#{'-moz-placeholder'} {
+        @each $property-name, $property-value in $properties {
+            #{$property-name}: $property-value;
+        }
+    }
+    
+    @at-root #{&}#{':focus'}#{':'}#{'ms-input-placeholder'} {
+        @each $property-name, $property-value in $properties {
+            #{$property-name}: $property-value;
+        }
+    }
+}
