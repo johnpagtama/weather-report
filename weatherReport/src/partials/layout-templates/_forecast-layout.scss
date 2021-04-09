@@ -1,0 +1,6 @@
+@import '../../partials/class-templates/class-templates';
+
+@include block(forecast-layout, (
+    display: grid, 
+    grid-template-columns: repeat(5, 1fr), 
+    text-align: center));
