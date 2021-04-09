@@ -1,0 +1,7 @@
+@mixin pseudo-element($name, $properties: ()) {
+    @at-root #{&}#{'::'}#{$name} {
+        @each $property-name, $property-value in $properties {
+            #{$property-name}: $property-value;
+        }
+    }
+}

@@ -9,10 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class WeatherDataService {
   private weatherUrl: string = 'http://localhost:4000/api/router/weather/';
   
-  public wData: Observable<Weather>;
-  
   constructor(private http: HttpClient) { }
-  
   // Returns weather data
-  getWeather = (loc: string): Observable<Weather> => this.wData = this.http.get<Weather>(`${this.weatherUrl}${loc}`);
+  getWeather = (loc: string): Observable<Weather> => this.http.get<Weather>(`${this.weatherUrl}${loc}`);
 }

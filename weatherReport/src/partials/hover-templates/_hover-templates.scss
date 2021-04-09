@@ -1,0 +1,7 @@
+@mixin hover($properties: ()) {
+    @at-root #{&}#{':'}#{'hover'} {
+        @each $property-name, $property-value in $properties {
+            #{$property-name}: $property-value;
+        }
+    }
+}

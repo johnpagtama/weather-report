@@ -15,7 +15,7 @@ export class CurrentWeatherComponent implements OnInit {
   private weather: Weather;
   
   public forecast: Forecast[] = [];
-  public queryList: string[] = [];
+  public queryList: object[] = [];
   
   constructor(private weatherData: WeatherDataService, private currentLocData: CurrentLocationService) { }
   
@@ -39,10 +39,8 @@ export class CurrentWeatherComponent implements OnInit {
     }, err => console.error(err));
     
   getWeather = (loc: string) => {
-    // Adds query to query list
-    this.queryList.push(loc);
     
-    console.log(this.queryList); // Delete later
+    // console.log(this.queryList); // Delete later
     
     this.weatherData.getWeather(loc).subscribe((res) => {
       this.weather = {
@@ -67,8 +65,10 @@ export class CurrentWeatherComponent implements OnInit {
       // Adds forecast data to forecast array
       this.forecast.push(...res[1].map((i: any) => ({ date: i.date, day: i.day, desc: i.desc, icon: i.icon, temp: i.temp })));
       
-      console.log(this.weather, this.forecast);
-      // this.unsubscribe();
+      // Adds query to query list
+      this.queryList.push({ weather: this.weather }, { forecast: this.forecast });
+      
+      console.log(this.queryList);
     }, err => console.error(err));
   }
 }

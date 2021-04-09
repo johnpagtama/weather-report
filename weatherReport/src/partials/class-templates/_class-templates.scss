@@ -1,0 +1,29 @@
+@mixin block($name, $properties: ()) {
+    @at-root #{'.'}#{$name} {
+        @each $property-name, $property-value in $properties {
+            #{$property-name}: $property-value;
+        }
+        
+        @content;
+    }
+}
+
+@mixin element($name, $properties: ()) {
+    @at-root #{&}__#{$name} {
+        @each $property-name, $property-value in $properties {
+            #{$property-name}: $property-value;
+        }
+        
+        @content;
+    }
+}
+
+@mixin modifier($name, $properties: ()) {
+    @at-root #{&}--#{$name} {
+        @each $property-name, $property-value in $properties {
+            #{$property-name}: $property-value;
+        }
+        
+        @content;
+    }
+}

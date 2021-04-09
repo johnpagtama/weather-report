@@ -1,0 +1,14 @@
+@mixin labelFocusValid($properties: ()) {
+    @at-root #{'.search-layout'} #{&}#{':focus ~ label,'} #{'.search-layout'} #{&}#{':valid ~ label'} {
+        @each $property-name, $property-value in $properties {
+            #{$property-name}: $property-value;
+        }
+    }
+}
+// @mixin labelValid($properties: ()) {
+//     @at-root #{&}#{':valid'}#{' ~ '}#{'label'} {
+//         @each $property-name, $property-value in $properties {
+//             #{$property-name}: $property-value;
+//         }
+//     }
+// }
