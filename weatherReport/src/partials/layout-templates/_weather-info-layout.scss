@@ -1,0 +1,14 @@
+@import '../class-templates/class-templates';
+
+@include block(info, (
+    display: grid,
+    grid-gap: 15px,
+    grid-template-areas:    "info__wind         info__visibility        info__pressure"
+                            "info__humidity     info__sunrise           info__sunset")) {
+    @include element(wind, (grid-area: info__wind, text-align: center));
+    @include element(visibility, (grid-area: info__visibility, text-align: center));
+    @include element(pressure, (grid-area: info__pressure, text-align: center));
+    @include element(humidity, (grid-area: info__humidity, text-align: center));
+    @include element(sunrise, (grid-area: info__sunrise, text-align: center));
+    @include element(sunset, (grid-area: info__sunset, text-align: center));
+}

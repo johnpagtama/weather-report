@@ -1,7 +1,8 @@
-<!-- <input #query type="text" value="Lodi,US" placeholder="City,Country ex: Lodi,US" (keydown.enter)="getWeather(query.value)">  -->
-<!-- <button type="button" (click)="getWeather(query.value)">Search</button> -->
-<!-- <div class="weather" *ngFor="let q of queryList; let i = index">
-    <ul>
-        {{q.forecast?.day}}
-    </ul>
-</div> -->
+<div class="weather">
+    <div class="weather__main">
+        <app-weather-main></app-weather-main>
+    </div>
+    <div class="weather__info">
+        <app-weather-info></app-weather-info>
+    </div>
+</div>
