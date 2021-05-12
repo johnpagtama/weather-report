@@ -1,5 +1,5 @@
-@import '../../partials/class-templates/class-templates';
-@import '../../partials/hover-templates/hover-templates';
+@import '../class-templates/class-templates';
+@import '../hover-templates/hover-templates';
 
 @include block(search-layout,   (
     display: grid,           

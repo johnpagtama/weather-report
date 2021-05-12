@@ -1,0 +1,7 @@
+@import '../class-templates/class-templates';
+
+@include block(weather, (
+    display: grid,
+    margin: 15px,
+    grid-template-columns: 1fr 2fr
+));

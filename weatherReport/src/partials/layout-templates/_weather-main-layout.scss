@@ -1,0 +1,16 @@
+@import '../class-templates/class-templates';
+
+@include block(main, (
+    display: grid,
+    margin: 0 15px,
+    grid-gap: 10px,
+    grid-template-columns: 2fr auto,
+    grid-template-areas:    "main__icon             main__icon"
+                            "main__desc             main__temp"
+                            "main__city-country     main__temp-max-min")) {
+    @include element(icon, (grid-area: main__icon, height: 16.6rem, width: 100%));
+    @include element(temp, (grid-area: main__temp));
+    @include element(temp-max-min, (grid-area: main__temp-max-min));
+    @include element(desc, (grid-area: main__desc));
+    @include element(city-country, (grid-area: main__city-country));
+}
