@@ -17,9 +17,10 @@ import { ForecastComponent } from './components/forecast/forecast.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WeatherInfoComponent } from './components/weather-info/weather-info.component';
 import { WeatherMainComponent } from './components/weather-main/weather-main.component';
+import { ForecastInfoComponent } from './components/forecast-info/forecast-info.component';
 
 @NgModule({
-  declarations: [AppComponent, CurrentWeatherComponent, CityListComponent, SearchQueryComponent, ForecastComponent, WeatherInfoComponent, WeatherMainComponent],
+  declarations: [AppComponent, CurrentWeatherComponent, CityListComponent, SearchQueryComponent, ForecastComponent, WeatherInfoComponent, WeatherMainComponent, ForecastInfoComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

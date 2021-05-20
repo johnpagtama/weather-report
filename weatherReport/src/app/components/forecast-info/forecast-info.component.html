@@ -1,0 +1,10 @@
+<div class="info">
+    <ng-container *ngFor="let d of days">
+        <mat-card class="info__forecast">
+            <mat-card-subtitle>{{d.day}}</mat-card-subtitle>
+            <img mat-card-avatar src="{{d.icon}}" alt="Weather Icon">
+            <mat-card-subtitle>{{d.desc}}</mat-card-subtitle>
+            <mat-card-subtitle>{{d.temp}}</mat-card-subtitle>
+        </mat-card>
+    </ng-container>
+</div>

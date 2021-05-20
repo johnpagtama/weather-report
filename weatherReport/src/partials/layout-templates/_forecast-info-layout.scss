@@ -1,0 +1,8 @@
+@import '../class-templates/class-templates';
+
+@include block(info, (
+    display: grid,
+    grid-gap: 15px,
+    grid-template-columns: repeat(auto-fit, minmax(100px, 2fr)),
+    text-align: center
+))
